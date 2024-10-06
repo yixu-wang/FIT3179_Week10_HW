@@ -16,11 +16,19 @@
 
 <script type="text/javascript">
 
-  var spec2 = "js/chloropleth_map.vg.json";
-  vegaEmbed('#chloropleth_map', spec2).then(function(result) {
+  var spec1 = "js/chloropleth_map.vg.json";
+  vegaEmbed('#chloropleth_map', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
+<div id="interactive_chart"></div>
 
+<script type="text/javascript">
+
+  var spec2 = "js/interactive_chart.vg.json";
+  vegaEmbed('#interactive_chart', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
 </body>
 </html>
