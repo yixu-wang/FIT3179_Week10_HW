@@ -25,13 +25,16 @@
       {
         "mark": {"type": "line"},
         "encoding": {
+          "x": {"field": "Year"},
           "y": {"field": "All alcohol-related deaths"},
           "color": {"datum": "Alcohol-related"}
+          
         }
       },
       {
         "mark": {"type": "line"},
         "encoding": {
+          "x": {"field": "Year"},
           "y": {"field": "All alcohol-induced deaths"},
           "color": {"datum": "Alcohol-induced"}
         }
@@ -41,12 +44,12 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "xOffset": -5,
-          "yOffset": -30
+          "xOffset": -20,
+          "yOffset": -10
         },
         "encoding": {
-          "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "All alcohol-related deaths", "type": "quantitative"},
+          "x": {"field": "Year"},
+          "y": {"field": "All alcohol-related deaths"},
           "text": {
             "condition": {
               "test": "year(datum.Year) === Year_Selector",
@@ -62,12 +65,12 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "xOffset": -5,
-          "yOffset": 30
+          "xOffset": 10,
+          "yOffset": 15
         },
         "encoding": {
-          "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "All alcohol-induced deaths", "type": "quantitative"},
+          "x": {"field": "Year"},
+          "y": {"field": "All alcohol-induced deaths"},
           "text": {
             "condition": {
               "test": "year(datum.Year) === Year_Selector",
@@ -108,7 +111,6 @@
       }
     ],
     "encoding": {
-      "x": {"field": "Year", "type": "temporal"},
       "y": {"type": "quantitative", "title": "Deaths"},
       "color": {
         "title": "Legend",
@@ -117,6 +119,11 @@
           "domain": ["Alcohol-related", "Alcohol-induced"],
           "range": ["blue", "red"]
         }
-      }
+      },
+      "tooltip": [
+            {"field": "Year"},
+            {"field": "All alcohol-related deaths"},
+            {"field": "All alcohol-induced deaths"}
+          ]
     }
   }
