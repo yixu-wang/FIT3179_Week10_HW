@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "data": {
+          "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Week10_HW/refs/heads/main/Interactive_Vis/data/alcohol_deaths.csv",
+          "format": {"type": "csv"}
+        },
+    "layer": [
+      {
+        "mark": {"type": "line"},
+        "encoding": {
+          "x": {"field": "Year"},
+          "y": {"field": "All alcohol-related deaths"},
+          "color": {"datum": "Alcohol-related"}
+        }
+      },
+      {
+        "mark": {"type": "line"},
+        "encoding": {
+          "x": {"field": "Year"},
+          "y": {"field": "All alcohol-induced deaths"},
+          "color": {"datum": "Alcohol-induced"}
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "type": "temporal"
+      },
+      "y": {
+        "type": "quantitative",
+        "title": "Deaths"},
+        "color": {
+          "type": "nominal",
+          "scale": {"domain": ["Alcohol-related", "Alcohol-induced"],
+          "range": ["blue", "red"]
+          }
+        }
+    }
+  }
