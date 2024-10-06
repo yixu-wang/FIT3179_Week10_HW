@@ -5,6 +5,7 @@
     right: 100px;
     height: 400px;
     width: 800px;
+    align-self: center;
 }
 
 #interactive_chart {
@@ -13,5 +14,6 @@
     left: 100px;
     right: 100px;
     height: 400px;
-    width: 800px; 
+    width: 800px;
+    align-self: center;
 }
